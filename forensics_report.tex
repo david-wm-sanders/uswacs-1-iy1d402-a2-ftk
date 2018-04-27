@@ -1,0 +1,155 @@
+% !TEX TS-program = pdflatex
+\documentclass[12pt]{article}
+
+% Package the packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[round]{natbib}
+\usepackage{pdfpages}
+\usepackage{fancyvrb}
+% \usepackage[parfill]{parskip}
+% \usepackage{titlesec}
+\usepackage{listings}
+% \usepackage{graphicx}
+% \usepackage{float}
+% \usepackage[british]{babel}
+% \usepackage{csquotes}
+% -
+
+% Configuration
+% Change font to Palatino
+\renewcommand{\rmdefault}{ppl}
+% Change the list item spacing
+\setlist{noitemsep}
+% Set the bibliography style
+\bibliographystyle{usw}
+% Set up better chapter titling
+% \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{12pt}{}
+% \titlespacing{\chapter}{0pt}{0pt}{12pt}
+% \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{12pt}{}
+% \titlespacing{\section}{0pt}{0pt}{6pt}
+% \titleformat{name=\section,numberless}{\normalfont\Large\bfseries}{}{0pt}{}
+% \titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{12pt}{}
+% \titleformat{name=\subsection,numberless}{\normalfont\large\bfseries}{}{0pt}{}
+% \titlespacing{\subsection}{0pt}{0pt}{3pt}
+% Set up the images path
+% \graphicspath{ {deliverables/screenshots/} }
+% -
+
+% Custom functions
+% Set up an inline todo command
+\newcommand{\todo}[1]{\textcolor{red}{todo: #1}}
+% Set up a todo environment
+\newenvironment{todoenv}
+  {\color{red}todo:}
+  {\color{black}}
+% Set up a terminal command block
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\term}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+% Definitions
+% \title{IY1D402\thanks{National Cyber Security Academy, University of South Wales, UK}\\{\textit{\small Cyber Security Tools And Practices}}\\SCADA Investigative Report}
+\title{IY1D402{\textit{\small \\Cyber Security Tools And Practices}}\\FTK Forensics Report}
+\author{David Sanders\\{\LARGE 17135397}}
+\date{\today}
+% -
+
+% Document
+\begin{document}
+
+% Cover page setup
+\maketitle
+\pagebreak
+% \fontsize{11.5pt}{11.5pt}\selectfont
+\tableofcontents
+% \fontsize{12pt}{12pt}\selectfont
+% -
+
+% Introduction
+\pagebreak
+\section{Introduction}
+
+% ------------------------------------------------------------------------------
+% \begin{table}[h!]
+%   \centering
+%   \begin{tabular}{|r l|}
+%     \hline
+%     IP address: & 192.168.254.132 \\
+%     \hline
+%     Operating system: & Linux Ubuntu 4.13.0-17-generic x86\_64 \\
+%     \hline
+%     Open ports: & 80 \textit{[http]}, 442 \textit{[ssh; OpenSSH 7.5p1 Ubuntu 10]} \\
+%     \hline
+%     Closed ports: & 443 \textit{[https]} \\
+%     \hline
+%     Price's groups: & phillip adm cdrom sudo dip www-data plugdev lpadmin sambashare \\
+%     \hline
+%   \end{tabular}
+%   \caption{Information on Price's machine and account}
+%   \label{table:pricemachineinfo}
+% \end{table}
+
+% \begin{Verbatim}[frame=leftline]
+% Loaded 393 passwords from 'passwords.txt'
+% (001/393; 00.25%) Password != '0'
+% (002/393; 00.51%) Password != 'scorpio'
+% (003/393; 00.76%) Password != 'buddy'
+% ...
+% (222/393; 56.49%) Password != 'trustno1'
+% (223/393; 56.74%) Password != 'newyork'
+% (224/393; 57.00%) Password == 'qwertyuiop'
+% Took 0.96 minutes to check 224/393 passwords at a rate of 3.88pw/s.
+% Performing recon...
+% Logging out.
+% \end{Verbatim}
+
+% \begin{Verbatim}[frame=leftline]
+% [User]
+% Language=en_GB
+% FormatsLocale=en_GB.UTF-8
+% XSession=
+% SystemAccount=true
+%
+% [InputSource0]
+% xkb=gb
+% \end{Verbatim}
+% ------------------------------------------------------------------------------
+
+% BIBLIOGRAPHY/REFERENCES
+\pagebreak
+% nocited refs
+% \nocite{example:referenceid:here}
+
+% Insert references section, left aligned
+\begin{flushleft}
+  \bibliography{references}
+\end{flushleft}
+
+
+% APPENDICES
+% Appendix~\ref{app:screenshots:7}
+% \appendix
+
+% \pagebreak
+% \chapter{Screenshot deliverables}
+% \section{\texttt{ifconfig}, \texttt{arp-scan}, and \texttt{nmap}}
+% \label{app:screenshots:1}
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.7\paperheight, angle=-90]{It's_Elementary_my_dear_Watson!-2017-12-06-13-41-10}
+% \end{figure}
+% \pagebreak
+
+% \pagebreak
+% \chapter{File deliverables}
+% \section{\texttt{recon.txt}}
+% \label{app:files:recon}
+% \lstinputlisting[frame=single, basicstyle=\small\ttfamily, showstringspaces=false, breaklines=true, postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space}]{deliverables/files/recon.txt}
+
+
+\end{document}
