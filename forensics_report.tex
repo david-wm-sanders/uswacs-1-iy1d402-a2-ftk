@@ -19,6 +19,7 @@
 % \usepackage{float}
 % \usepackage[british]{babel}
 % \usepackage{csquotes}
+\usepackage{tabularx}
 % -
 
 % Configuration
@@ -72,7 +73,33 @@
 
 % Introduction
 \pagebreak
-\section{Introduction}
+\section{ACPO}
+\pagebreak
+\section{Evidence Listing and Reporting}
+\subsection{Example Artefact Template}
+\subsubsection{1}
+\begin{table}[h!]
+\centering
+% \caption{My caption}
+% \label{my-label}
+\ttfamily
+\begin{tabularx}{1\textwidth}{|X|X|X|X|}
+\hline
+Filename (incl. ext.)  & x & Hash (MD5)          & x \tabularnewline \hline
+Date Created           & x & Is deleted?         & x \tabularnewline \hline
+Date Modified          & x & File path           & x \tabularnewline \hline
+Date Accessed          & x & Size (L/P)          & x \tabularnewline \hline
+FTK Number             & x & Evidence Number     & x \tabularnewline \hline
+Evidence Description   & \multicolumn{3}{l|}{x}      \tabularnewline \hline
+Technique used         & \multicolumn{3}{l|}{x}      \tabularnewline \hline
+Reason for selection   & \multicolumn{3}{l|}{x}      \tabularnewline \hline
+\end{tabularx}
+\end{table}
+\subsection{Example Hash Block Template}
+
+\pagebreak
+\section{Passwords Recovered}
+
 
 % ------------------------------------------------------------------------------
 % \begin{table}[h!]
