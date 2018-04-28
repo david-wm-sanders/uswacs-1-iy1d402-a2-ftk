@@ -20,6 +20,7 @@
 % \usepackage[british]{babel}
 % \usepackage{csquotes}
 \usepackage{tabularx}
+% \usepackage{makecell}
 % -
 
 % Configuration
@@ -82,17 +83,19 @@
 \centering
 % \caption{My caption}
 % \label{my-label}
-\ttfamily
-\begin{tabularx}{1\textwidth}{|X|X|X|X|}
+\ttfamily\small
+\newcolumntype{k}{>{\hsize=.5\hsize}X}
+\newcolumntype{v}{X}
+\begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
-Filename (incl. ext.)  & x & Hash (MD5)          & x \tabularnewline \hline
+Filename               & x & Hash (MD5)          & x \tabularnewline \hline
 Date Created           & x & Is deleted?         & x \tabularnewline \hline
 Date Modified          & x & File path           & x \tabularnewline \hline
 Date Accessed          & x & Size (L/P)          & x \tabularnewline \hline
 FTK Number             & x & Evidence Number     & x \tabularnewline \hline
-Evidence Description   & \multicolumn{3}{l|}{x}      \tabularnewline \hline
-Technique used         & \multicolumn{3}{l|}{x}      \tabularnewline \hline
-Reason for selection   & \multicolumn{3}{l|}{x}      \tabularnewline \hline
+Evidence Description   & \multicolumn{3}{v|}{x}      \tabularnewline \hline
+Technique used         & \multicolumn{3}{v|}{x}      \tabularnewline \hline
+Reason for selection   & \multicolumn{3}{v|}{x}      \tabularnewline \hline
 \end{tabularx}
 \end{table}
 \subsection{Example Hash Block Template}
