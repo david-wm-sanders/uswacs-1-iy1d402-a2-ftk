@@ -107,9 +107,9 @@ Filename               & \multicolumn{3}{t|}{x}                         \tabular
 Hash (MD5)             & \multicolumn{3}{t|}{x}                         \tabularnewline \hline
 Hash (SHA1)            & \multicolumn{3}{t|}{x}                         \tabularnewline \hline
 FTK No.                & x                        &  Evidence No.  & x  \tabularnewline \hline
-Date Created           & \multicolumn{3}{v|}{x}                         \tabularnewline \hline
-Date Modified          & \multicolumn{3}{v|}{x}                         \tabularnewline \hline
-Date Accessed          & \multicolumn{3}{v|}{x}                         \tabularnewline \hline
+Date Created           & \multicolumn{3}{t|}{x}                         \tabularnewline \hline
+Date Modified          & \multicolumn{3}{t|}{x}                         \tabularnewline \hline
+Date Accessed          & \multicolumn{3}{t|}{x}                         \tabularnewline \hline
 Size (L/P)             & x                        & Is deleted?    & x  \tabularnewline \hline
 File path              & \multicolumn{3}{t|}{x}                         \tabularnewline \hline
 Evidence Description   & \multicolumn{3}{t|}{x}                         \tabularnewline \hline
@@ -133,9 +133,9 @@ Filename               & \multicolumn{3}{t|}{helloworld.txt}                    
 Hash (MD5)             & \multicolumn{3}{t|}{4262ff3e3c24530bd4c5c97c0e2df4db}  \tabularnewline \hline
 Hash (SHA1)            & \multicolumn{3}{t|}{d995591deb52c94ac928a8f720fbca55af01d945}  \tabularnewline \hline
 FTK No.                & 17135397\_IY1D402\_CW2  &  Evidence No.  & DS01        \tabularnewline \hline
-Date Created           & \multicolumn{3}{v|}{28/04/2018 02:47}                  \tabularnewline \hline
-Date Modified          & \multicolumn{3}{v|}{28/04/2018 02:47}                  \tabularnewline \hline
-Date Accessed          & \multicolumn{3}{v|}{28/04/2018 02:47}                  \tabularnewline \hline
+Date Created           & \multicolumn{3}{t|}{28/04/2018 02:47}                  \tabularnewline \hline
+Date Modified          & \multicolumn{3}{t|}{28/04/2018 02:47}                  \tabularnewline \hline
+Date Accessed          & \multicolumn{3}{t|}{28/04/2018 02:47}                  \tabularnewline \hline
 Size (L/P)             & 10 bytes / 10 bytes   & Is deleted?    & Yes           \tabularnewline \hline
 File path              & \multicolumn{3}{t|}{C:\textbackslash Users\textbackslash david\textbackslash Documents\textbackslash some\textbackslash sub\textbackslash folder}  \tabularnewline \hline
 Evidence Description   & \multicolumn{3}{t|}{This file was discovered in the Documents folder inside the user's home directory. It contains vital evidence which links the suspect definitively to malfeasant activities. This text is just filler designed to test LaTeX rendering of large text bodies inside tabularx environments.}                                 \tabularnewline \hline
@@ -145,7 +145,17 @@ Reason for selection   & \multicolumn{3}{t|}{This file was discovered in the Doc
 \end{table}
 
 \subsection{Example Hash Block Template}
-
+\begin{table}[h!]
+\ttfamily\footnotesize
+\setlength{\tabcolsep}{0.1cm}
+\newcolumntype{k}{p{0.75cm}}
+\newcolumntype{v}{c}
+\begin{tabular}{|k|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|}
+\hline
+MD5 & 4 & 2 & 6 & 2 & F & F & 3 & E & 3 & C & 2 & 4 & 5 & 3 & 0 & B & D & 4 & C & 5 & C & 9 & 7 & C & 0 & E & 2 & D & F & 4 & D & B & - & - & - & - & - & - & - & - \tabularnewline \hline
+SHA1 & D & 9 & 9 & 5 & 5 & 9 & 1 & D & E & B & 5 & 2 & C & 9 & 4 & A & C & 9 & 2 & 8 & A & 8 & F & 7 & 2 & 0 & F & B & C & A & 5 & 5 & A & F & 0 & 1 & D & 9 & 4 & 5 \tabularnewline \hline
+\end{tabular}
+\end{table}
 \pagebreak
 \section{Passwords Recovered}
 
