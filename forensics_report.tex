@@ -159,7 +159,7 @@ I have chosen to include the hashes outside the table as well -- this allows the
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
 % FTK No.  & 17135397\_IY1D402\_CW2  &  Evidence No.  & DS01  \tabularnewline \hline
-FTK No.  & \textit{FTK Case Identifier}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
+FTK No.  & \textit{FTK Item Number}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
 Filename  & \multicolumn{3}{t|}{\textit{name\_of\_file.ext}}  \tabularnewline \hline
 Hash (MD5)  & \multicolumn{3}{t|}{\textit{MD5 hash of the file}}  \tabularnewline \hline
 Hash (SHA1)  & \multicolumn{3}{t|}{\textit{SHA1 hash of the file}}  \tabularnewline \hline
@@ -177,6 +177,79 @@ Reason for selection  & \multicolumn{3}{t|}{\textit{Why was this file was select
 
 \pagebreak
 \section{Evidence Listing and Reporting}
+\subsection{Image Integrity Verification}
+FTK Case Identifier: 17135397\_IY1D402\_CW2
+
+Each time FTK was opened, the integrity of the evidence was verified inside FTK by using \texttt{Tools > Verify Image Integrity...}
+
+The hashes calculated were:
+{
+\ttfamily\tiny
+\begin{flushright}
+MD5:265e715403af7777215295d6de5a8e57
+\end{flushright}
+\vspace{-3.5em}
+}
+\begin{table}[h!]
+\ttfamily\footnotesize
+\setlength{\tabcolsep}{0.1cm}
+\newcolumntype{k}{p{1cm}}
+\newcolumntype{v}{c}
+\begin{tabular}{|k|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|}
+\hline
+MD5 & 2 & 6 & 5 & e & 7 & 1 & 5 & 4 & 0 & 3 & a & f & 7 & 7 & 7 & 7 & 2 & 1 & 5 & 2 & 9 & 5 & d & 6 & d & e & 5 & a & 8 & e & 5 & 7 & - & - & - & - & - & - & - & - \tabularnewline \hline
+SHA1 & b & 7 & c & 5 & 5 & a & 7 & e & a & e & 2 & f & 3 & 1 & f & 9 & c & 6 & f & 7 & 6 & a & 0 & 2 & 8 & f & 8 & e & e & 8 & 8 & 3 & b & d & e & 5 & 4 & 2 & 0 & d \tabularnewline \hline
+\end{tabular}
+\end{table}
+{
+\ttfamily\tiny
+\vspace{-4.5em}
+\begin{flushright}
+SHA1:b7c55a7eae2f31f9c6f76a028f8ee883bde5420d
+\end{flushright}
+}
+FTK reports that these hashes were successfully verified against those calculated when the evidence image was taken.
+
+\pagebreak
+\subsection{Artefact 1}
+% Name	Label	Item #	Ext	Path	Category	P-Size (bytes)	L-Size (bytes)	MD5	SHA1	SHA256	Created	Accessed	Modified
+% Bad Guy.contact		1139	contact	Bad_Guy.E01/NONAME [FAT32]/[root]/Documents/soup/b/g/Bad Guy.contact	XML	8192	2069	721fa07cecb880951fb675944f3607b4	3c6df384298894d2db5b076cd3e566568c1db466		20/02/2018 12:05:58 (2018-02-20 12:05:58 UTC)	2018-02-20	20/02/2018 12:07:48 (2018-02-20 12:07:48 UTC)
+\begin{table}[h!]
+\centering
+% \caption{My caption}
+% \label{my-label}
+\ttfamily
+% \small
+\newcolumntype{k}{p{3cm}}
+\newcolumntype{v}{X}
+\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
+\begin{tabularx}{1\textwidth}{|k|v|k|v|}
+\hline
+FTK No.  & 1139  & Evidence No.  & \textbf{DS01}  \tabularnewline \hline
+Filename  & \multicolumn{3}{t|}{Bad Guy.contact}  \tabularnewline \hline
+Hash (MD5)  & \multicolumn{3}{t|}{721fa07cecb880951fb675944f3607b4}  \tabularnewline \hline
+Hash (SHA1)  & \multicolumn{3}{t|}{3c6df384298894d2db5b076cd3e566568c1db466}  \tabularnewline \hline
+Date Created  & \multicolumn{3}{t|}{20/02/2018 12:05:58 UTC}  \tabularnewline \hline
+Date Modified  & \multicolumn{3}{t|}{20/02/2018 12:07:48 UTC}  \tabularnewline \hline
+Date Accessed  & \multicolumn{3}{t|}{20/02/2018}  \tabularnewline \hline
+Is deleted?  & \multicolumn{3}{t|}{No}  \tabularnewline \hline
+Size (L/P)  & \multicolumn{3}{t|}{2069 B / 8192 B}  \tabularnewline \hline
+File path  & \multicolumn{3}{t|}{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/soup/b/g/Bad Guy.contact}  \tabularnewline \hline
+Evidence Description  & \multicolumn{3}{t|}{An XML `.contact' file that contains Mr. Bad Guy's contact details -- notably, his email address is `bad.guy@secret.net'}  \tabularnewline \hline
+Technique used  & \multicolumn{3}{t|}{
+The technique used to find this file was to:
+\begin{enumerate}
+  \item Go to the `Overview' tab
+  \item Select the `File Extension' view
+  \item Select `contact' extension
+\end{enumerate}
+In the `File List' pane, there are 4 files shown -- 3 have been deleted and the artefact file is the file that has been moved from the `[root]' of the drive into a subfolder inside `Documents' in an attempt to hide it.
+}  \tabularnewline \hline
+Reason for selection  & \multicolumn{3}{t|}{
+This file was selected because it links Mr.\ Bad Guy to the 16GB red USB memory stick that was recovered from his pocket during his arrest.
+}  \tabularnewline \hline
+\end{tabularx}
+\end{table}
 
 \pagebreak
 \section{Passwords Recovered}
