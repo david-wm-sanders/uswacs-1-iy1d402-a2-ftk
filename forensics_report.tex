@@ -89,65 +89,10 @@ There are four guiding principles:
 
 In applying these principles, it is important to be aware of the following. The evidence which is produced in court is to be no more and no less at the time of presentation than it was when it was first taken into the possession of law enforcement and the onus is on the prosecution to show that this is the case. Operating systems and other programs frequently alter, add to, and delete the contents of electronic storage and this may happen automatically without the user being aware that the data has changed. It follows that an image should be made of the original data - creating an image will ensure that the original data is preserved so that an independent third-party can re-examine it if required. Images may be physical/logical block images of the entire device or a logical file image containing partial or selective data. Where data is only stored remotely in a location that is inaccessible, obtaining an image may be impossible. It is essential in such cases that only a person who is competent and appropriately trained accesses and recovers data. Objectivity must be displayed in a court of law as well as the integrity of evidence. Audit trails must be kept to demonstrate how evidence has been recovered -- all processes must be shown.
 \pagebreak
-\section{Evidence Listing and Reporting}
-\subsection{Example Artefact Template}
-\subsubsection{1}
-\begin{table}[h!]
-\centering
-% \caption{My caption}
-% \label{my-label}
-\ttfamily
-% \small
-\newcolumntype{k}{p{3cm}}
-\newcolumntype{v}{X}
-\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
-\begin{tabularx}{1\textwidth}{|k|v|k|v|}
-\hline
-FTK No.               & x                       & Evidence No.  & x  \tabularnewline \hline
-Filename              & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Hash (MD5)            & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Hash (SHA1)           & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Date Created          & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Date Modified         & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Date Accessed         & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Is deleted?           & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Size (L/P)            & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-File path             & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Evidence Description  & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Technique used        & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-Reason for selection  & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-\end{tabularx}
-\end{table}
-
-\begin{table}[h!]
-\centering
-% \caption{My caption}
-% \label{my-label}
-\ttfamily
-% \small
-\newcolumntype{k}{p{3cm}}
-\newcolumntype{v}{X}
-\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
-\begin{tabularx}{1\textwidth}{|k|v|k|v|}
-\hline
-FTK No.                & 17135397\_IY1D402\_CW2  &  Evidence No.  & DS01  \tabularnewline \hline
-Filename               & \multicolumn{3}{t|}{helloworld.txt}  \tabularnewline \hline
-Hash (MD5)             & \multicolumn{3}{t|}{4262ff3e3c24530bd4c5c97c0e2df4db}  \tabularnewline \hline
-Hash (SHA1)            & \multicolumn{3}{t|}{d995591deb52c94ac928a8f720fbca55af01d945}  \tabularnewline \hline
-Date Created           & \multicolumn{3}{t|}{28/04/2018 02:47}  \tabularnewline \hline
-Date Modified          & \multicolumn{3}{t|}{28/04/2018 02:47}  \tabularnewline \hline
-Date Accessed          & \multicolumn{3}{t|}{28/04/2018 02:47}  \tabularnewline \hline
-Is deleted?            & \multicolumn{3}{t|}{No}  \tabularnewline \hline
-Size (L/P)             & \multicolumn{3}{t|}{10 bytes / 10 bytes}  \tabularnewline \hline
-File path              & \multicolumn{3}{t|}{C:\textbackslash Users\textbackslash david\textbackslash Documents\textbackslash some\textbackslash sub\textbackslash folder}  \tabularnewline \hline
-Evidence Description   & \multicolumn{3}{t|}{This file was discovered in the Documents folder inside the user's home directory. It contains vital evidence which links the suspect definitively to malfeasant activities. This text is just filler designed to test \LaTeX\ rendering of large text bodies inside tabularx environments.}  \tabularnewline \hline
-Technique used         & \multicolumn{3}{t|}{This file was discovered in the Documents folder inside the user's home directory. It contains vital evidence which links the suspect definitively to malfeasant activities. This text is just filler designed to test \LaTeX\ rendering of large text bodies inside tabularx environments.}  \tabularnewline \hline
-Reason for selection   & \multicolumn{3}{t|}{This file was discovered in the Documents folder inside the user's home directory. It contains vital evidence which links the suspect definitively to malfeasant activities. This text is just filler designed to test \LaTeX\ rendering of large text bodies inside tabularx environments.}  \tabularnewline \hline
-\end{tabularx}
-\end{table}
-
-\subsection{Example Hash Block Template}
-Auto-generated by the \texttt{make\_hash\_table\_latex.py} script:
+\section{Example Templates}
+In this section, I will provide examples of the tables used in this report.
+\subsection{Hashes Template}
+This is an example of the hash table template that is used to show the MD5 and SHA1 hashes of the evidence image so that it can be verified by those reading this report. It was auto-generated by the \texttt{make\_hash\_table\_latex.py} script.
 {
 \ttfamily\tiny
 \begin{flushright}
@@ -173,7 +118,66 @@ SHA1 & d & 9 & 9 & 5 & 5 & 9 & 1 & d & e & b & 5 & 2 & c & 9 & 4 & a & c & 9 & 2
 SHA1:d995591deb52c94ac928a8f720fbca55af01d945
 \end{flushright}
 }
-Hopefully they look really nice.
+I have chosen to include the hashes outside the table as well -- this allows them to be searchable within the output PDF report.
+\subsection{Artefact Template}
+% \begin{table}[h!]
+% \centering
+% % \caption{My caption}
+% % \label{my-label}
+% \ttfamily
+% % \small
+% \newcolumntype{k}{p{3cm}}
+% \newcolumntype{v}{X}
+% \newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
+% \begin{tabularx}{1\textwidth}{|k|v|k|v|}
+% \hline
+% FTK No.               & x                       & Evidence No.  & x  \tabularnewline \hline
+% Filename              & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Hash (MD5)            & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Hash (SHA1)           & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Date Created          & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Date Modified         & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Date Accessed         & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Is deleted?           & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Size (L/P)            & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% File path             & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Evidence Description  & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Technique used        & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% Reason for selection  & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
+% \end{tabularx}
+% \end{table}
+
+\begin{table}[h!]
+\centering
+% \caption{My caption}
+% \label{my-label}
+\ttfamily
+% \small
+\newcolumntype{k}{p{3cm}}
+\newcolumntype{v}{X}
+\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
+\begin{tabularx}{1\textwidth}{|k|v|k|v|}
+\hline
+% FTK No.  & 17135397\_IY1D402\_CW2  &  Evidence No.  & DS01  \tabularnewline \hline
+FTK No.  & \textit{FTK Case Identifier}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
+Filename  & \multicolumn{3}{t|}{\textit{name\_of\_file.ext}}  \tabularnewline \hline
+Hash (MD5)  & \multicolumn{3}{t|}{\textit{MD5 hash of the file}}  \tabularnewline \hline
+Hash (SHA1)  & \multicolumn{3}{t|}{\textit{SHA1 hash of the file}}  \tabularnewline \hline
+Date Created  & \multicolumn{3}{t|}{\textit{The time at which the file was created}}  \tabularnewline \hline
+Date Modified  & \multicolumn{3}{t|}{\textit{The time at which the file was last modified}}  \tabularnewline \hline
+Date Accessed  & \multicolumn{3}{t|}{\textit{The time at which the file was last accessed}}  \tabularnewline \hline
+Is deleted?  & \multicolumn{3}{t|}{\textit{Was the file deleted? Yes/No.}}  \tabularnewline \hline
+Size (L/P)  & \multicolumn{3}{t|}{\textit{The logical/physical size of the file}}  \tabularnewline \hline
+File path  & \multicolumn{3}{t|}{\textit{C:\textbackslash full\textbackslash path\textbackslash to\textbackslash file}}  \tabularnewline \hline
+Evidence Description  & \multicolumn{3}{t|}{\textit{A description of the evidence}}  \tabularnewline \hline
+Technique used  & \multicolumn{3}{t|}{\textit{The technique used to discover the evidence}}  \tabularnewline \hline
+Reason for selection  & \multicolumn{3}{t|}{\textit{Why was this file was selected as evidence?}}  \tabularnewline \hline
+\end{tabularx}
+\end{table}
+
+\pagebreak
+\section{Evidence Listing and Reporting}
+
 \pagebreak
 \section{Passwords Recovered}
 
