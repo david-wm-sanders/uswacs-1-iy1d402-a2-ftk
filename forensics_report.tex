@@ -95,7 +95,7 @@ This is an example of the hash table template that is used to show the MD5 and S
 {
 \ttfamily\tiny
 \begin{flushright}
-MD5:4262ff3e3c24530bd4c5c97c0e2df4db
+MD5:265e715403af7777215295d6de5a8e57
 \end{flushright}
 \vspace{-3.5em}
 }
@@ -106,55 +106,29 @@ MD5:4262ff3e3c24530bd4c5c97c0e2df4db
 \newcolumntype{v}{c}
 \begin{tabular}{|k|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|v|}
 \hline
-MD5 & 4 & 2 & 6 & 2 & f & f & 3 & e & 3 & c & 2 & 4 & 5 & 3 & 0 & b & d & 4 & c & 5 & c & 9 & 7 & c & 0 & e & 2 & d & f & 4 & d & b & - & - & - & - & - & - & - & - \tabularnewline \hline
-SHA1 & d & 9 & 9 & 5 & 5 & 9 & 1 & d & e & b & 5 & 2 & c & 9 & 4 & a & c & 9 & 2 & 8 & a & 8 & f & 7 & 2 & 0 & f & b & c & a & 5 & 5 & a & f & 0 & 1 & d & 9 & 4 & 5 \tabularnewline \hline
+MD5 & 2 & 6 & 5 & e & 7 & 1 & 5 & 4 & 0 & 3 & a & f & 7 & 7 & 7 & 7 & 2 & 1 & 5 & 2 & 9 & 5 & d & 6 & d & e & 5 & a & 8 & e & 5 & 7 & - & - & - & - & - & - & - & - \tabularnewline \hline
+SHA1 & b & 7 & c & 5 & 5 & a & 7 & e & a & e & 2 & f & 3 & 1 & f & 9 & c & 6 & f & 7 & 6 & a & 0 & 2 & 8 & f & 8 & e & e & 8 & 8 & 3 & b & d & e & 5 & 4 & 2 & 0 & d \tabularnewline \hline
 \end{tabular}
 \end{table}
 {
 \ttfamily\tiny
 \vspace{-4.5em}
 \begin{flushright}
-SHA1:d995591deb52c94ac928a8f720fbca55af01d945
+SHA1:b7c55a7eae2f31f9c6f76a028f8ee883bde5420d
 \end{flushright}
 }
 I have chosen to include the hashes outside the table as well -- this allows them to be searchable within the output PDF report.
 \subsection{Artefact Template}
-% \begin{table}[h!]
-% \centering
-% % \caption{My caption}
-% % \label{my-label}
-% \ttfamily
-% % \small
-% \newcolumntype{k}{p{3cm}}
-% \newcolumntype{v}{X}
-% \newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
-% \begin{tabularx}{1\textwidth}{|k|v|k|v|}
-% \hline
-% FTK No.               & x                       & Evidence No.  & x  \tabularnewline \hline
-% Filename              & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Hash (MD5)            & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Hash (SHA1)           & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Date Created          & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Date Modified         & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Date Accessed         & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Is deleted?           & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Size (L/P)            & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% File path             & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Evidence Description  & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Technique used        & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% Reason for selection  & \multicolumn{3}{t|}{x}                       \tabularnewline \hline
-% \end{tabularx}
-% \end{table}
 
 \begin{table}[h!]
 \centering
 % \caption{My caption}
 % \label{my-label}
-\ttfamily
+% \ttfamily
 % \small
-\newcolumntype{k}{p{3cm}}
+\newcolumntype{k}{>{\raggedright\arraybackslash}p{2.75cm}}
 \newcolumntype{v}{X}
-\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
+\newcolumntype{t}{>{\raggedright\arraybackslash}p{\textwidth - 4\tabcolsep - 2.75cm - 3\arrayrulewidth}}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
 FTK No.  & \textit{FTK Item Number}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
@@ -176,7 +150,7 @@ Reason for selection  & \multicolumn{3}{t|}{\textit{Why was this file was select
 \pagebreak
 \section{Evidence Listing and Reporting}
 \subsection{Image Integrity Verification}
-FTK Case Identifier: 17135397\_IY1D402\_CW2
+FTK Case Identifier: 17135397\_IY1D402\_CW2\\
 
 Each time FTK was opened, the integrity of the evidence was verified inside FTK by using \texttt{Tools > Verify Image Integrity...}
 
@@ -216,34 +190,34 @@ FTK reports that these hashes were successfully verified against those calculate
 \centering
 % \caption{My caption}
 % \label{my-label}
-\ttfamily
+% \ttfamily
 % \small
-\newcolumntype{k}{p{3cm}}
+\newcolumntype{k}{>{\raggedright\arraybackslash}p{2.75cm}}
 \newcolumntype{v}{X}
-\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
+\newcolumntype{t}{>{\raggedright\arraybackslash}p{\textwidth - 4\tabcolsep - 2.75cm - 3\arrayrulewidth}}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
 FTK No.  & 1139  & Evidence No.  & \textbf{DS01}  \tabularnewline \hline
 Filename  & \multicolumn{3}{t|}{Bad Guy.contact}  \tabularnewline \hline
-Hash (MD5)  & \multicolumn{3}{t|}{721fa07cecb880951fb675944f3607b4}  \tabularnewline \hline
-Hash (SHA1)  & \multicolumn{3}{t|}{3c6df384298894d2db5b076cd3e566568c1db466}  \tabularnewline \hline
+Hash (MD5)  & \multicolumn{3}{t|}{\texttt{721fa07cecb880951fb675944f3607b4}}  \tabularnewline \hline
+Hash (SHA1)  & \multicolumn{3}{t|}{\texttt{3c6df384298894d2db5b076cd3e566568c1db466}}  \tabularnewline \hline
 Date Created  & \multicolumn{3}{t|}{20/02/2018 12:05:58 UTC}  \tabularnewline \hline
 Date Modified  & \multicolumn{3}{t|}{20/02/2018 12:07:48 UTC}  \tabularnewline \hline
 Date Accessed  & \multicolumn{3}{t|}{20/02/2018}  \tabularnewline \hline
 Is deleted?  & \multicolumn{3}{t|}{No}  \tabularnewline \hline
 Size (L/P)  & \multicolumn{3}{t|}{2069 B / 8192 B}  \tabularnewline \hline
-File path  & \multicolumn{3}{t|}{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/soup/b/g/Bad Guy.contact}  \tabularnewline \hline
+File path  & \multicolumn{3}{t|}{\texttt{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/soup/b/g/Bad Guy.contact}}  \tabularnewline \hline
 Evidence Description  & \multicolumn{3}{t|}{
-An XML `.contact' file that contains Mr. Bad Guy's contact details -- notably, his email address is `bad.guy@secret.net'
+An XML \texttt{.contact} file that contains Mr. Bad Guy's contact details -- notably, his email address is \texttt{bad.guy@secret.net}
 }  \tabularnewline \hline
 Technique used  & \multicolumn{3}{t|}{
 The technique used to find this file was to:
 \begin{enumerate}
-  \item Go to the `Overview' tab
-  \item Select the `File Extension' view
-  \item Select `contact' extension
+  \item Go to the \texttt{Overview} tab
+  \item Select the \texttt{File Extension} view
+  \item Select \texttt{contact} extension
 \end{enumerate}
-In the `File List' pane, there are 4 files shown -- 3 have been deleted and the artefact file is the file that has been moved from the `[root]' of the drive into a subfolder inside `Documents' in an attempt to hide it.
+In the \texttt{File List} pane, there are 4 files shown -- 3 have been deleted and the artefact file is the file that has been moved from the \texttt{[root]} of the drive into a subfolder inside \texttt{Documents} in an attempt to hide it.
 }  \tabularnewline \hline
 Reason for selection  & \multicolumn{3}{t|}{
 This file was selected because it links Mr.\ Bad Guy to the 16GB red USB memory stick that was recovered from his pocket during his arrest.
@@ -260,29 +234,29 @@ This file was selected because it links Mr.\ Bad Guy to the 16GB red USB memory 
 \centering
 % \caption{My caption}
 % \label{my-label}
-\ttfamily
+% \ttfamily
 % \small
 % \newcolumntype{k}{b{3cm}}
-\newcolumntype{k}{p{3cm}}
+\newcolumntype{k}{>{\raggedright\arraybackslash}p{2.75cm}}
 \newcolumntype{v}{X}
-\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
+\newcolumntype{t}{>{\raggedright\arraybackslash}p{\textwidth - 4\tabcolsep - 2.75cm - 3\arrayrulewidth}}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
 FTK No.  & 18441  & Evidence No.  & \textbf{DS02}  \tabularnewline \hline
 Filename  & \multicolumn{3}{t|}{!WRD0643.TMP}  \tabularnewline \hline
-Hash (MD5)  & \multicolumn{3}{t|}{01b85c739b8de7479ff9b91e9a24213d}  \tabularnewline \hline
-Hash (SHA1)  & \multicolumn{3}{t|}{1d71f415cffa0b86274a1335e9a970f90d880885}  \tabularnewline \hline
+Hash (MD5)  & \multicolumn{3}{t|}{\texttt{01b85c739b8de7479ff9b91e9a24213d}}  \tabularnewline \hline
+Hash (SHA1)  & \multicolumn{3}{t|}{\texttt{1d71f415cffa0b86274a1335e9a970f90d880885}}  \tabularnewline \hline
 Date Created  & \multicolumn{3}{t|}{17/02/2017 11:23:43 UTC}  \tabularnewline \hline
 Date Modified  & \multicolumn{3}{t|}{17/02/2017 11:25:36 UTC}  \tabularnewline \hline
 Date Accessed  & \multicolumn{3}{t|}{17/02/2017}  \tabularnewline \hline
 Is deleted?  & \multicolumn{3}{t|}{No}  \tabularnewline \hline
 Size (L/P)  & \multicolumn{3}{t|}{18432 B / 24576 B}  \tabularnewline \hline
-File path  & \multicolumn{3}{t|}{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/it stuff/!WRD0643.TMP}  \tabularnewline \hline
+File path  & \multicolumn{3}{t|}{\texttt{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/it stuff/!WRD0643.TMP}}  \tabularnewline \hline
 % {\vspace{-4em minus \baselineskip}Evidence Description}  & \multicolumn{3}{t|}{
 {\vspace{-4.4em}Evidence Description}  & \multicolumn{3}{t|}{
 \makecell[{{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}}]{
 An encrypted Microsoft Office Word 2010 temporary file.\\
-Decryption of this file using `PRTK` (password: `brycecanyon`) revealed the contents:\\
+Decryption of this file using \texttt{PRTK} (password: \texttt{brycecanyon}) revealed the contents:\\
 ``I have broke into their restricted network and put a backdoor account into their system.\\
 Username: adam\\
 Password: isthebesthackerever!''
@@ -290,15 +264,15 @@ Password: isthebesthackerever!''
 Technique used  & \multicolumn{3}{t|}{
 In order to find this evidence artefact:
 \begin{enumerate}
-  \item Go to `Overview tab > File Status > Encrypted Files' and export the files
-  \item Open `PRTK', import the encrypted files, and attempt to decrypt them
-  \item Go to `Tools > Decrypt Files...'' and add the passwords that `PRTK' returned
-  \item Go to `Overview tab > File Status > Decrypted Files' and select `Decrypted - !WRD0643.TMP' in the `File List' pane
-  \item View the contents of the decrypted file in the `File Content > Natural' pane
+  \item Go to \texttt{Overview tab > File Status > Encrypted Files} and export the files
+  \item Open \texttt{PRTK}, import the encrypted files, and attempt to decrypt them
+  \item Go to \texttt{Tools > Decrypt Files...} and add the passwords that \texttt{PRTK} returned
+  \item Go to \texttt{Overview tab > File Status > Decrypted Files} and select \texttt{Decrypted - !WRD0643.TMP} in the \texttt{File List} pane
+  \item View the contents of the decrypted file in the \texttt{File Content > Natural} pane
 \end{enumerate}
 }  \tabularnewline \hline
 Reason for selection  & \multicolumn{3}{t|}{
-This artefact was selected because the file author details how they broke into a restricted network and inserted a backdoor account on a system -- violations of the \textit{Computer Misuse Act 1990}.
+This artefact was selected because the file author details how they broke into a restricted network and inserted a backdoor account on a system -- violations of the Computer Misuse Act 1990.
 }  \tabularnewline \hline
 \end{tabularx}
 \end{table}
