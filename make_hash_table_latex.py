@@ -2,6 +2,14 @@ import sys
 
 md5h, sha1h = sys.argv[1], sys.argv[2]
 
+print(r"{")
+print(r"\ttfamily\tiny")
+print(r"\begin{flushright}")
+print(f"MD5:{md5h}")
+print(r"\end{flushright}")
+print(r"\vspace{-4em}")
+print(r"}")
+
 print(r"\begin{table}[h!]")
 print(r"\ttfamily\footnotesize")
 print(r"\setlength{\tabcolsep}{0.1cm}")
@@ -18,8 +26,8 @@ print(r"\end{table}")
 
 print(r"{")
 print(r"\ttfamily\tiny")
-print(r"\vspace{-4em}")
+print(r"\vspace{-4.5em}")
 print(r"\begin{flushright}")
-print(f"MD5:{md5h}~SHA1:{sha1h}")
+print(f"SHA1:{sha1h}")
 print(r"\end{flushright}")
 print(r"}")
