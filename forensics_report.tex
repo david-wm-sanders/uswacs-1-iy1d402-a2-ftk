@@ -19,8 +19,7 @@
 % \usepackage{float}
 % \usepackage[british]{babel}
 % \usepackage{csquotes}
-\usepackage{tabularx}
-% \usepackage{makecell}
+\usepackage{tabularx, makecell}
 % -
 
 % Configuration
@@ -158,7 +157,6 @@ I have chosen to include the hashes outside the table as well -- this allows the
 \newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
-% FTK No.  & 17135397\_IY1D402\_CW2  &  Evidence No.  & DS01  \tabularnewline \hline
 FTK No.  & \textit{FTK Item Number}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
 Filename  & \multicolumn{3}{t|}{\textit{name\_of\_file.ext}}  \tabularnewline \hline
 Hash (MD5)  & \multicolumn{3}{t|}{\textit{MD5 hash of the file}}  \tabularnewline \hline
@@ -235,7 +233,9 @@ Date Accessed  & \multicolumn{3}{t|}{20/02/2018}  \tabularnewline \hline
 Is deleted?  & \multicolumn{3}{t|}{No}  \tabularnewline \hline
 Size (L/P)  & \multicolumn{3}{t|}{2069 B / 8192 B}  \tabularnewline \hline
 File path  & \multicolumn{3}{t|}{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/soup/b/g/Bad Guy.contact}  \tabularnewline \hline
-Evidence Description  & \multicolumn{3}{t|}{An XML `.contact' file that contains Mr. Bad Guy's contact details -- notably, his email address is `bad.guy@secret.net'}  \tabularnewline \hline
+Evidence Description  & \multicolumn{3}{t|}{
+An XML `.contact' file that contains Mr. Bad Guy's contact details -- notably, his email address is `bad.guy@secret.net'
+}  \tabularnewline \hline
 Technique used  & \multicolumn{3}{t|}{
 The technique used to find this file was to:
 \begin{enumerate}
@@ -247,6 +247,67 @@ In the `File List' pane, there are 4 files shown -- 3 have been deleted and the 
 }  \tabularnewline \hline
 Reason for selection  & \multicolumn{3}{t|}{
 This file was selected because it links Mr.\ Bad Guy to the 16GB red USB memory stick that was recovered from his pocket during his arrest.
+}  \tabularnewline \hline
+\end{tabularx}
+\end{table}
+
+\pagebreak
+\subsection{Artefact 2}
+% Name	Label	Item #	Ext	Path	Category	P-Size (bytes)	L-Size (bytes)	MD5	SHA1	SHA256	Created	Accessed	Modified
+% !WRD0643.TMP		18441	tmp	Bad_Guy.E01/NONAME [FAT32]/[root]/Documents/it stuff/!WRD0643.TMP	Encrypted Word 2010	24576	18432	01b85c739b8de7479ff9b91e9a24213d	1d71f415cffa0b86274a1335e9a970f90d880885		17/02/2017 11:23:43 (2017-02-17 11:23:43 UTC)	n/a	17/02/2017 11:25:36 (2017-02-17 11:25:36 UTC)
+
+% \newbox\verbbox
+% \setbox\verbbox=\vbox{
+% % \hsize=4in
+% test test
+% \begin{Verbatim}
+%   verbatim text here $ \ & etc.
+% \end{Verbatim}
+% }
+
+\begin{table}[h!]
+\centering
+% \caption{My caption}
+% \label{my-label}
+\ttfamily
+% \small
+% \newcolumntype{k}{b{3cm}}
+\newcolumntype{k}{p{3cm}}
+\newcolumntype{v}{X}
+\newcolumntype{t}{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}
+\begin{tabularx}{1\textwidth}{|k|v|k|v|}
+\hline
+FTK No.  & 18441  & Evidence No.  & \textbf{DS02}  \tabularnewline \hline
+Filename  & \multicolumn{3}{t|}{!WRD0643.TMP}  \tabularnewline \hline
+Hash (MD5)  & \multicolumn{3}{t|}{01b85c739b8de7479ff9b91e9a24213d}  \tabularnewline \hline
+Hash (SHA1)  & \multicolumn{3}{t|}{1d71f415cffa0b86274a1335e9a970f90d880885}  \tabularnewline \hline
+Date Created  & \multicolumn{3}{t|}{17/02/2017 11:23:43 UTC}  \tabularnewline \hline
+Date Modified  & \multicolumn{3}{t|}{17/02/2017 11:25:36 UTC}  \tabularnewline \hline
+Date Accessed  & \multicolumn{3}{t|}{17/02/2017}  \tabularnewline \hline
+Is deleted?  & \multicolumn{3}{t|}{No}  \tabularnewline \hline
+Size (L/P)  & \multicolumn{3}{t|}{18432 B / 24576 B}  \tabularnewline \hline
+File path  & \multicolumn{3}{t|}{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/it stuff/!WRD0643.TMP}  \tabularnewline \hline
+{\vspace{-4.25em}Evidence Description}  & \multicolumn{3}{t|}{
+\makecell[{{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}}]{
+An encrypted Microsoft Office Word 2010 temporary file.\\
+Decryption of this file using `PRTK` (password: `brycecanyon`) revealed the contents:\\
+``I have broke into their restricted network and put a backdoor account into their system.\\
+Username: adam\\
+Password: isthebesthackerever!''
+% \box $\vcenter{\verbbox}$
+}}  \tabularnewline \hline
+Technique used  & \multicolumn{3}{t|}{
+In order to find this evidence artefact:
+\begin{enumerate}
+  \item Go to `Overview tab > File Status > Encrypted Files' and export the files
+  \item Open `PRTK', import the encrypted files, and attempt to decrypt them
+  \item Go to `Tools > Decrypt Files...'' and add the passwords that `PRTK' returned
+  \item Go to `Overview tab > File Status > Decrypted Files' and select `Decrypted - !WRD0643.TMP' in the `File List' pane
+  \item View the contents of the decrypted file in the `File Content > Natural' pane
+\end{enumerate}
+}  \tabularnewline \hline
+Reason for selection  & \multicolumn{3}{t|}{
+This artefact was selected because the file author details how they broke into a restricted network and inserted a backdoor account on a system -- violations of the \textit{Computer Misuse Act 1990}.
 }  \tabularnewline \hline
 \end{tabularx}
 \end{table}
