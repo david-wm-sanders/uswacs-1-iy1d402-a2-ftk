@@ -210,9 +210,54 @@ This artefact was selected because the file author details how they broke into a
 \end{table}
 
 \pagebreak
+\subsection{Artefact 3}
+\begin{table}[h!]
+\centering
+% \caption{My caption}
+% \label{my-label}
+% \ttfamily
+% \small
+\newcolumntype{k}{>{\raggedright\arraybackslash}p{2.75cm}}
+\newcolumntype{v}{X}
+\newcolumntype{t}{>{\raggedright\arraybackslash}p{\textwidth - 4\tabcolsep - 2.75cm - 3\arrayrulewidth}}
+% Force cells to align content top-left
+\renewcommand\cellalign{tl}
+\begin{tabularx}{1\textwidth}{|k|v|k|v|}
+\hline
+FTK No.  & \textit{FTK Item Number}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
+Filename  & \multicolumn{3}{t|}{\textit{name\_of\_file.ext}}  \tabularnewline \hline
+Hash (MD5)  & \multicolumn{3}{t|}{\textit{MD5 hash of the file}}  \tabularnewline \hline
+Hash (SHA1)  & \multicolumn{3}{t|}{\textit{SHA1 hash of the file}}  \tabularnewline \hline
+Date Created  & \multicolumn{3}{t|}{\textit{The time at which the file was created}}  \tabularnewline \hline
+Date Modified  & \multicolumn{3}{t|}{\textit{The time at which the file was last modified}}  \tabularnewline \hline
+Date Accessed  & \multicolumn{3}{t|}{\textit{The time at which the file was last accessed}}  \tabularnewline \hline
+Is deleted?  & \multicolumn{3}{t|}{\textit{Was the file deleted? Yes/No.}}  \tabularnewline \hline
+Size (L/P)  & \multicolumn{3}{t|}{\textit{The logical/physical size of the file}}  \tabularnewline \hline
+File path  & \multicolumn{3}{t|}{\textit{C:\textbackslash full\textbackslash path\textbackslash to\textbackslash file}}  \tabularnewline \hline
+Evidence Description  & \multicolumn{3}{t|}{\textit{A description of the evidence}}  \tabularnewline \hline
+Technique used  & \multicolumn{3}{t|}{\textit{The technique used to discover the evidence}}  \tabularnewline \hline
+Reason for selection  & \multicolumn{3}{t|}{\textit{Why was this file was selected as evidence?}}  \tabularnewline \hline
+\end{tabularx}
+\end{table}
+
+\pagebreak
 \section{Passwords Recovered}
+\subsection{Process}
+In order to recover the passwords for the encrypted files we used the Password Recovery Toolkit (PRTK) that is included in the AccessData FTK toolset. As the process was the same for all three passwords, I will detail the process once below before discussing the passwords that were recovered. The process was as follows:
+\begin{enumerate}
+  \item In FTK go to \texttt{Overview tab > File Status > Encrypted Files} and export the files to a folder on the forensics workstation.
+  \item Open PRTK and import the encrypted files using \texttt{Add Files} from the folder that they were exported to.
+  \item Wait for PRTK to discover the passwords for the files.
+  \item When the passwords have been discovered, in FTK go to \texttt{Tools > Decrypt Files} and inside \texttt{Set Passwords} insert the passwords, delimited by newlines, that PRTK discovered.
+  \item When the files have been decrypted, go to \texttt{Overview tab > File Status > Decrypted Files} to view them and their contents.
+\end{enumerate}
 
-
+\subsubsection{Simple Password}
+a
+\subsubsection{Intermediate Password}
+b
+\subsubsection{Advanced Password}
+c
 % ------------------------------------------------------------------------------
 % \begin{table}[h!]
 %   \centering
