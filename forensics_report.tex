@@ -129,6 +129,8 @@ I have chosen to include the hashes outside the table as well -- this allows the
 \newcolumntype{k}{>{\raggedright\arraybackslash}p{2.75cm}}
 \newcolumntype{v}{X}
 \newcolumntype{t}{>{\raggedright\arraybackslash}p{\textwidth - 4\tabcolsep - 2.75cm - 3\arrayrulewidth}}
+% Force cells to align content top-left
+\renewcommand\cellalign{tl}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
 FTK No.  & \textit{FTK Item Number}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
@@ -195,6 +197,8 @@ FTK reports that these hashes were successfully verified against those calculate
 \newcolumntype{k}{>{\raggedright\arraybackslash}p{2.75cm}}
 \newcolumntype{v}{X}
 \newcolumntype{t}{>{\raggedright\arraybackslash}p{\textwidth - 4\tabcolsep - 2.75cm - 3\arrayrulewidth}}
+% Force cells to align content top-left
+\renewcommand\cellalign{tl}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
 FTK No.  & 1139  & Evidence No.  & \textbf{DS01}  \tabularnewline \hline
@@ -240,6 +244,8 @@ This file was selected because it links Mr.\ Bad Guy to the 16GB red USB memory 
 \newcolumntype{k}{>{\raggedright\arraybackslash}p{2.75cm}}
 \newcolumntype{v}{X}
 \newcolumntype{t}{>{\raggedright\arraybackslash}p{\textwidth - 4\tabcolsep - 2.75cm - 3\arrayrulewidth}}
+% Force cells to align content top-left
+\renewcommand\cellalign{tl}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
 FTK No.  & 18441  & Evidence No.  & \textbf{DS02}  \tabularnewline \hline
@@ -252,8 +258,9 @@ Date Accessed  & \multicolumn{3}{t|}{17/02/2017}  \tabularnewline \hline
 Is deleted?  & \multicolumn{3}{t|}{No}  \tabularnewline \hline
 Size (L/P)  & \multicolumn{3}{t|}{18432 B / 24576 B}  \tabularnewline \hline
 File path  & \multicolumn{3}{t|}{\texttt{Bad\_Guy.E01/NONAME [FAT32]/[root]/Documents/it stuff/!WRD0643.TMP}}  \tabularnewline \hline
-% {\vspace{-4em minus \baselineskip}Evidence Description}  & \multicolumn{3}{t|}{
-{\vspace{-4.4em}Evidence Description}  & \multicolumn{3}{t|}{
+% {\vspace{-4.4em}Evidence Description}  & \multicolumn{3}{t|}{
+% If using makecell, we must makecell all cells in row to get correct rendering and content alignment
+\makecell[{{p{2.75cm}}}]{\raggedright Evidence Description}  & \multicolumn{3}{t|}{
 \makecell[{{p{\textwidth - 4\tabcolsep - 3cm - 3\arrayrulewidth}}}]{
 An encrypted Microsoft Office Word 2010 temporary file.\\
 Decryption of this file using \texttt{PRTK} (password: \texttt{brycecanyon}) revealed the contents:\\
