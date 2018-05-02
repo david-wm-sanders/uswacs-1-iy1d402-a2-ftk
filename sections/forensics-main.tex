@@ -211,6 +211,9 @@ This artefact was selected because the file author details how they broke into a
 
 \pagebreak
 \subsection{Artefact 3}
+% Name	Label	Item #	Ext	Path	Category	P-Size (bytes)	L-Size (bytes)	MD5	SHA1	SHA256	Created	Accessed	Modified
+% History		24538	<missing?>	Bad_Guy.E01/NONAME [FAT32]/[root]/PortableApps/GoogleChromePortable/Data/profile/Default/History	History File	106496	106496	4ddb92d90d22afc08a36affef779e07d	e4024fb85ac8dad55f869d7eefec9089516e2593		17/02/2017 10:19:19 (2017-02-17 10:19:19 UTC)	2017-02-17	17/02/2017 10:27:22 (2017-02-17 10:27:22 UTC)
+
 \begin{table}[h!]
 \centering
 % \caption{My caption}
@@ -224,19 +227,25 @@ This artefact was selected because the file author details how they broke into a
 \renewcommand\cellalign{tl}
 \begin{tabularx}{1\textwidth}{|k|v|k|v|}
 \hline
-FTK No.  & \textit{FTK Item Number}  & Evidence No.  & \textit{Evidence Identifier}  \tabularnewline \hline
-Filename  & \multicolumn{3}{t|}{\textit{name\_of\_file.ext}}  \tabularnewline \hline
-Hash (MD5)  & \multicolumn{3}{t|}{\textit{MD5 hash of the file}}  \tabularnewline \hline
-Hash (SHA1)  & \multicolumn{3}{t|}{\textit{SHA1 hash of the file}}  \tabularnewline \hline
-Date Created  & \multicolumn{3}{t|}{\textit{The time at which the file was created}}  \tabularnewline \hline
-Date Modified  & \multicolumn{3}{t|}{\textit{The time at which the file was last modified}}  \tabularnewline \hline
-Date Accessed  & \multicolumn{3}{t|}{\textit{The time at which the file was last accessed}}  \tabularnewline \hline
-Is deleted?  & \multicolumn{3}{t|}{\textit{Was the file deleted? Yes/No.}}  \tabularnewline \hline
-Size (L/P)  & \multicolumn{3}{t|}{\textit{The logical/physical size of the file}}  \tabularnewline \hline
-File path  & \multicolumn{3}{t|}{\textit{C:\textbackslash full\textbackslash path\textbackslash to\textbackslash file}}  \tabularnewline \hline
-Evidence Description  & \multicolumn{3}{t|}{\textit{A description of the evidence}}  \tabularnewline \hline
-Technique used  & \multicolumn{3}{t|}{\textit{The technique used to discover the evidence}}  \tabularnewline \hline
-Reason for selection  & \multicolumn{3}{t|}{\textit{Why was this file was selected as evidence?}}  \tabularnewline \hline
+FTK No.  & 24538  & Evidence No.  & \textbf{DS03}  \tabularnewline \hline
+Filename  & \multicolumn{3}{t|}{History}  \tabularnewline \hline
+Hash (MD5)  & \multicolumn{3}{t|}{\texttt{4ddb92d90d22afc08a36affef779e07d}}  \tabularnewline \hline
+Hash (SHA1)  & \multicolumn{3}{t|}{\texttt{e4024fb85ac8dad55f869d7eefec9089516e2593}}  \tabularnewline \hline
+Date Created  & \multicolumn{3}{t|}{17/02/2017 10:19:19 UTC}  \tabularnewline \hline
+Date Modified  & \multicolumn{3}{t|}{17/02/2017 10:27:22 UTC}  \tabularnewline \hline
+Date Accessed  & \multicolumn{3}{t|}{17/02/2017}  \tabularnewline \hline
+Is deleted?  & \multicolumn{3}{t|}{No}  \tabularnewline \hline
+Size (L/P)  & \multicolumn{3}{t|}{106496 B / 106496 B}  \tabularnewline \hline
+File path  & \multicolumn{3}{t|}{\texttt{Bad\_Guy.E01/NONAME [FAT32]/[root]/PortableApps/GoogleChromePortable/Data/profile/ Default/History}}  \tabularnewline \hline
+Evidence Description  & \multicolumn{3}{t|}{
+This PortableApps Google Chrome History (SQLite) file shows the visit date, visit count, and URL of sites that have been visited by user of the PortableApp. The file contains reference to sites such as \texttt{http://hackthissite.org/} and \texttt{http://www.wikihow.com/Hack}.
+}  \tabularnewline \hline
+Technique used  & \multicolumn{3}{t|}{
+The image \texttt{[root]} contains a PortableApps directory. Investigation of this directory in the \texttt{Explore tab} in FTK reveals a portable version of Google Chrome. As portable applications store their data near the executables as opposed to AppData (or something similar) like non-portable applications, it follows that information such as the cookies, history, and bookmarks would be in the \texttt{GoogleChromePortable/Data} directory. A search of this directory revealed the History database file.
+}  \tabularnewline \hline
+Reason for selection  & \multicolumn{3}{t|}{
+This file was selected as an evidence artefact because the History contains references to searches and websites related to learning how to hack systems.
+}  \tabularnewline \hline
 \end{tabularx}
 \end{table}
 
@@ -253,11 +262,11 @@ In order to recover the passwords for the encrypted files we used the Password R
 \end{enumerate}
 
 \subsection{Recovered Passwords}
-\subsubsection{Simple Password}
+\subsubsection{Simple}
 a
-\subsubsection{Intermediate Password}
+\subsubsection{Intermediate}
 b
-\subsubsection{Advanced Password}
+\subsubsection{Difficult}
 c
 % ------------------------------------------------------------------------------
 % \begin{table}[h!]
